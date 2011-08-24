@@ -1,3 +1,4 @@
+require 'sanitize'
 module Admin
   class ApiContentsController < ActionController::Base
 

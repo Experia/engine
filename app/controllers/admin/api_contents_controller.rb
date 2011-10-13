@@ -51,6 +51,7 @@ module Admin
 
     def sanitize_content_params
       (params[:content] || {}).each do |key, value|
+        next unless value.is_a?(String)
         params[:content][key] = Sanitize.clean(value, Sanitize::Config::BASIC)
       end
     end
